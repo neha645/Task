@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tom-select@2.4.1/dist/css/tom-select.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Validation Form</h2>
+      <form id="form" onsubmit="return false;">
+       
+        <!-- Name Field -->
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            oninput="validateField('name')"
+            required
+          />
+          <small id="name-error" class="error-message"></small>
+        </div>
+
+      <!-- Email Field -->
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            oninput="validateField('email')"
+            required
+          />
+          <small id="email-error" class="error-message"></small>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            oninput="validateField('password')"
+            required
+          />
+          <small id="password-error" class="error-message"></small>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            oninput="validateField('phone')"
+            required
+          />
+          <small id="phone-error" class="error-message"></small>
+        </div>
+
+        <!-- Date of Birth Field -->    
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            onchange="validateField('dob')"
+            required
+          />
+          <small id="dob-error" class="error-message"></small>
+        </div>
+
+        <!-- Age Field -->
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" disabled />
+          <small id="age-error" class="error-message"></small>
+        </div>
+
+        <!-- State Field -->
+        <div class="field-row">
+          <div class="field">
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+              <option value="">Select State</option>
+              <option value="madhya_pradesh">Madhya Pradesh</option>
+              <option value="uttar_pradesh">Uttar Pradesh</option>
+              <option value="maharashtra">Maharashtra</option>
+              <option value="gujarat">Gujarat</option>
+              <option value="rajasthan">Rajasthan</option>
+              <option value="punjab">Punjab</option>
+            </select>
+            <small id="state-error" class="error-message"></small>
+          </div>
+
+          <!-- District Field -->
+          <div class="field">
+            <label for="district">District</label>
+            <select id="district" name="district" required>
+              <option value="">Select District</option>
+            </select>
+            <small id="district-error" class="error-message"></small>
+          </div>
+        </div>
+
+        <!-- Sumit button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.1/dist/js/tom-select.complete.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
